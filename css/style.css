@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Hide btn when print */
+@media print {
+  button {
+    display: none;
+  }
+
+  body {
+    font-size: 80%;
+  }
+}
+/* ------------------- */
+
+:root {
+  --background-color: #fff;
+  --text-color: #162f4d;
+  --input-color: #e4e4e4;
+  --button-color: #11426b;
+  --button-color-hover: #162f4d;
+  --mode-bg-color: #11426b;
+  --mode-color: #e4e4e4;
+  --mode-hover: #162f4d;
+}
+
+.dark-theme {
+  --background-color: #14181d;
+  --text-color: #fff;
+  --input-color: #e4e4e4;
+  --button-color: #11426b;
+  --button-color-hover: #335279;
+  --mode-bg-color: #e4e4e4;
+  --mode-color: #11426b;
+  --mode-hover: #d4d4d4;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.content {
+  flex-grow: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0 40px 0;
+  font-size: 16px;
+}
+
+.left-fix {
+  width: 100px;
+}
+
+.mode {
+  width: 100px;
+  font-size: 14px;
+  color: var(--mode-color);
+  background-color: var(--mode-bg-color);
+}
+
+.mode:hover {
+  background-color: var(--mode-hover);
+}
+
+.neto-izracunaj input,
+.bruto-1-izracunaj input,
+.bruto-2-izracunaj input {
+  width: 180px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid var(--input-color);
+  font-size: 20px;
+  text-align: center;
+  font-weight: 700;
+}
+
+input {
+  width: 150px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid var(--input-color);
+  font-size: 16px;
+  text-align: center;
+  background-color: var(--input-color);
+}
+
+button {
+  width: 180px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-color);
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.03);
+  background-color: var(--button-color-hover);
+}
+
+.kalkulator-racunica,
+.stope {
+  display: flex;
+  justify-content: space-around;
+}
+
+.neto-izracunaj,
+.iznos-poreza,
+.osnovica-neto,
+.bruto-1-izracunaj,
+.bruto-1-pio,
+.bruto-1-zdravstveno,
+.bruto-1-nezaposlenost,
+.bruto-2-izracunaj,
+.bruto-2-pio,
+.bruto-2-zdravstveno,
+.bruto-2-nezaposlenost {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.neto,
+.bruto-1,
+.bruto-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 30%;
+}
+
+.neto-rezultat,
+.bruto-1-rezultat,
+.bruto-2-rezultat {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.vertical-line {
+  padding: 0.5px;
+  height: 350px;
+  background-color: var(--text-color);
+  align-self: center;
+}
+
+.ukupno {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px 0;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.neto-stopa,
+.bruto-1-stopa,
+.bruto-2-stopa {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #979797;
+}
+
+.neto-stopa p,
+.bruto-1-stopa p,
+.bruto-2-stopa p {
+  margin: 8px 0 4px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 10px 0;
+}

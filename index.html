@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Kalkulator zarade - Duos</title>
+  </head>
+  <body>
+    <header class="header">
+      <button class="mode" id="print">Print</button>
+      <h1>Kalkulator Zarade</h1>
+      <button class="mode" id="change-mode">Dark mode</button>
+    </header>
+    <main class="content">
+      <div class="kalkulator-racunica">
+        <div class="neto">
+          <div class="neto-izracunaj">
+            <h2>Neto zarada:</h2>
+            <input type="text" maxlength="7" id="neto-zarada" />
+            <button id="izracunaj-neto">Izračunaj</button>
+          </div>
+          <div class="neto-rezultat">
+            <div class="iznos-poreza">
+              <p>Iznos poreza:</p>
+              <input readonly type="text" id="iznos-poreza" />
+            </div>
+            <div class="osnovica-neto">
+              <p>Osnovica za plaćanje poreza:</p>
+              <input readonly type="text" id="osnovica-za-placanje-poreza" />
+            </div>
+          </div>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="bruto-1">
+          <div class="bruto-1-izracunaj">
+            <h2>Bruto I:</h2>
+            <input type="text" maxlength="7" id="bruto-1-zarada" />
+            <button id="izracunaj-bruto-1">Izračunaj</button>
+          </div>
+          <div class="bruto-1-rezultat">
+            <div class="bruto-1-pio">
+              <p>Iznos doprinosa PIO (BRUTO I):</p>
+              <input readonly type="text" id="bruto-1-pio" />
+            </div>
+            <div class="bruto-1-zdravstveno">
+              <p>Zdravstveno osiguranje (BRUTO I):</p>
+              <input readonly type="text" id="bruto-1-zdravstveno" />
+            </div>
+            <div class="bruto-1-nezaposlenost">
+              <p>Nezaposlenost (BRUTO I):</p>
+              <input readonly type="text" id="bruto-1-nezaposlenost" />
+            </div>
+          </div>
+        </div>
+        <div class="vertical-line"></div>
+        <div class="bruto-2">
+          <div class="bruto-2-izracunaj">
+            <h2>Bruto II:</h2>
+            <input type="text" maxlength="7" id="bruto-2-zarada" />
+            <button id="izracunaj-bruto-2">Izračunaj</button>
+          </div>
+          <div class="bruto-2-rezultat">
+            <div class="bruto-2-pio">
+              <p>Iznos doprinosa PIO (BRUTO II):</p>
+              <input readonly type="text" id="bruto-2-pio" />
+            </div>
+            <div class="bruto-2-zdravstveno">
+              <p>Zdravstveno osiguranje (BRUTO II):</p>
+              <input readonly type="text" id="bruto-2-zdravstveno" />
+            </div>
+            <div class="bruto-2-nezaposlenost">
+              <p>Nezaposlenost (BRUTO II):</p>
+              <input readonly type="text" id="bruto-2-nezaposlenost" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ukupno">
+        <p>Ukupno doprinosa i poreza:</p>
+        <input readonly type="text" id="ukupno" />
+      </div>
+
+      <div class="stope">
+        <div class="neto-stopa">
+          <p>Poreska stopa:</p>
+          <p>10%</p>
+          <p>Poresko oslobođenje:</p>
+          <p>21 712 RSD</p>
+          <p>Maksimalna osnovica za doprinose:</p>
+          <p>500 360 RSD</p>
+          <p>Minimalna osnovica za doprinose:</p>
+          <p>35 025 RSD</p>
+        </div>
+        <div class="bruto-1-stopa">
+          <p>Stopa dopinosa PIO (BRUTO I):</p>
+          <p>14%</p>
+          <p>Zdravstveno osiguranje (BRUTO I):</p>
+          <p>5.15%</p>
+          <p>Nezaposlenost (BRUTO I):</p>
+          <p>0.75%</p>
+        </div>
+        <div class="bruto-2-stopa">
+          <p>Stopa dopinosa PIO (BRUTO II):</p>
+          <p>10%</p>
+          <p>Zdravstveno osiguranje (BRUTO II):</p>
+          <p>5.15%</p>
+          <p>Nezaposlenost (BRUTO II):</p>
+          <p>0%</p>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <p style="text-align: center">
+        Copyright &copy; Duos Asinos
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+      </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
