@@ -195,9 +195,7 @@ izracunajBrutoIIBtn.addEventListener("click", () => {
     const iznosPorezaNeto = Math.round(
       ((iznosBrutoI - poreskoOslobodjenje) * poreskaStopa) / 100
     );
-    const iznosOsnoviceZaP = Math.round(
-      iznosBrutoI - poreskoOslobodjenje / 100
-    );
+    const iznosOsnoviceZaP = Math.round(iznosBrutoI - poreskoOslobodjenje);
     const iznosPioB1 = Math.round(
       (iznosBrutoI * stopaDoprinosaPioBrutoI) / 100
     );

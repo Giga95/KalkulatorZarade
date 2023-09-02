@@ -1,0 +1,115 @@
+/* 1440 */
+
+@media only screen and (max-width: 1440px) {
+  body {
+    font-size: 85%;
+  }
+  .header {
+    font-size: 15px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 75%;
+  }
+
+  .header {
+    font-size: 14px;
+  }
+
+  .neto-izracunaj input,
+  .bruto-1-izracunaj input,
+  .bruto-2-izracunaj input {
+    width: 160px;
+    height: 38px;
+  }
+
+  input {
+    width: 130px;
+    height: 32px;
+  }
+
+  button {
+    width: 160px;
+    height: 38px;
+    font-size: 15px;
+  }
+
+  .mode {
+    width: 95px;
+    height: 33px;
+    font-size: 12px;
+  }
+}
+
+/* 768px */
+
+@media only screen and (max-width: 768px) {
+  body {
+    font-size: 85%;
+  }
+
+  .mode {
+    display: none;
+  }
+
+  .kalkulator-racunica,
+  .stope {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .neto,
+  .bruto-1,
+  .bruto-2 {
+    margin: 20px 0;
+    gap: 20px;
+    width: 45%;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+  .stope {
+    display: none;
+  }
+
+  .ukupno {
+    margin: 20px 0 40px 0;
+  }
+
+  .neto-izracunaj input,
+  .bruto-1-izracunaj input,
+  .bruto-2-izracunaj input {
+    width: 180px;
+    height: 40px;
+  }
+
+  input {
+    width: 150px;
+    height: 35px;
+  }
+
+  button {
+    width: 180px;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+/* 544px */
+
+@media only screen and (max-width: 544px) {
+  .header {
+    font-size: 12px;
+  }
+  .neto,
+  .bruto-1,
+  .bruto-2 {
+    margin: 20px 0;
+    gap: 20px;
+    width: 70%;
+  }
+}
