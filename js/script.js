@@ -253,3 +253,22 @@ function printPage() {
 }
 
 document.getElementById("print").addEventListener("click", printPage);
+
+// KONVERTOR
+
+const konvertorInput = document.getElementById("konvertor");
+const konvertorBtn = document.getElementById("konvertuj");
+
+const kurs = 117.3;
+
+konvertorBtn.addEventListener("click", () => {
+  const euroValue = parseFloat(konvertorInput.value);
+
+  if (!isNaN(euroValue)) {
+    const dinarValue = Math.round(euroValue * kurs);
+
+    konvertor.value = dinarValue + " RSD";
+  } else {
+    alert('Please enter a valid number in "Konvertor" field.');
+  }
+});

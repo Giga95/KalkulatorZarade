@@ -5,9 +5,14 @@
   font-family: "Roboto", sans-serif;
 }
 
-/* Hide btn when print */
+/* Settings when print button is pressed */
 @media print {
   button {
+    display: none;
+  }
+
+  .konvertor h3,
+  .konvertor input {
     display: none;
   }
 
@@ -67,20 +72,23 @@ body {
   width: 100px;
 }
 
-.mode {
+.mode,
+.print {
   width: 100px;
   font-size: 14px;
   color: var(--mode-color);
   background-color: var(--mode-bg-color);
 }
 
-.mode:hover {
+.mode:hover,
+.print:hover {
   background-color: var(--mode-hover);
 }
 
 .neto-izracunaj input,
 .bruto-1-izracunaj input,
-.bruto-2-izracunaj input {
+.bruto-2-izracunaj input,
+.konvertor input {
   width: 180px;
   height: 40px;
   border-radius: 5px;
@@ -89,6 +97,10 @@ body {
   text-align: center;
   font-weight: 700;
   transition: all 0.3s ease;
+}
+
+.konvertor input::placeholder {
+  font-size: 14px;
 }
 
 input {
@@ -135,7 +147,18 @@ button:hover {
 .bruto-2-izracunaj,
 .bruto-2-pio,
 .bruto-2-zdravstveno,
-.bruto-2-nezaposlenost {
+.bruto-2-nezaposlenost,
+.p-stopa,
+.p-oslobodjenje,
+.max-osnovica,
+.min-osnovica,
+.b1-pio,
+.b1-zdravstveno,
+.b1-nezaposlenost,
+.b2-pio,
+.b2-zdravstveno,
+.b2-nezaposlenost,
+.konvertor {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -181,13 +204,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 15px;
   color: #979797;
-}
-
-.neto-stopa p,
-.bruto-1-stopa p,
-.bruto-2-stopa p {
-  margin: 8px 0 4px 0;
 }
 
 footer {

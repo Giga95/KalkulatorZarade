@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="header">
-      <button class="mode" id="print">Print</button>
+      <button class="print" id="print">Print</button>
       <h1>Kalkulator Zarade</h1>
       <button class="mode" id="change-mode">Dark mode</button>
     </header>
@@ -40,6 +40,17 @@
             <div class="osnovica-neto">
               <p>Osnovica za plaćanje poreza:</p>
               <input readonly type="text" id="osnovica-za-placanje-poreza" />
+            </div>
+            <div class="konvertor">
+              <h3>EUR - RSD</h3>
+              <input
+                inputmode="numeric"
+                type="text"
+                maxlength="10"
+                id="konvertor"
+                placeholder="1 EUR = 117.3 RSD"
+              />
+              <button id="konvertuj">Konvertuj</button>
             </div>
           </div>
         </div>
@@ -105,30 +116,50 @@
 
       <div class="stope">
         <div class="neto-stopa">
-          <p>Poreska stopa:</p>
-          <p>10%</p>
-          <p>Poresko oslobođenje:</p>
-          <p>21 712 RSD</p>
-          <p>Maksimalna osnovica za doprinose:</p>
-          <p>500 360 RSD</p>
-          <p>Minimalna osnovica za doprinose:</p>
-          <p>35 025 RSD</p>
+          <div class="p-stopa">
+            <p>Poreska stopa:</p>
+            <p>10%</p>
+          </div>
+          <div class="p-oslobodjenje">
+            <p>Poresko oslobođenje:</p>
+            <p>21 712 RSD</p>
+          </div>
+          <div class="max-osnovica">
+            <p>Maksimalna osnovica za doprinose:</p>
+            <p>500 360 RSD</p>
+          </div>
+          <div class="min-osnovica">
+            <p>Minimalna osnovica za doprinose:</p>
+            <p>35 025 RSD</p>
+          </div>
         </div>
         <div class="bruto-1-stopa">
-          <p>Stopa dopinosa PIO (BRUTO I):</p>
-          <p>14%</p>
-          <p>Zdravstveno osiguranje (BRUTO I):</p>
-          <p>5.15%</p>
-          <p>Nezaposlenost (BRUTO I):</p>
-          <p>0.75%</p>
+          <div class="b1-pio">
+            <p>Stopa dopinosa PIO (BRUTO I):</p>
+            <p>14%</p>
+          </div>
+          <div class="b1-zdravstveno">
+            <p>Zdravstveno osiguranje (BRUTO I):</p>
+            <p>5.15%</p>
+          </div>
+          <div class="b1-nezaposlenost">
+            <p>Nezaposlenost (BRUTO I):</p>
+            <p>0.75%</p>
+          </div>
         </div>
         <div class="bruto-2-stopa">
-          <p>Stopa dopinosa PIO (BRUTO II):</p>
-          <p>10%</p>
-          <p>Zdravstveno osiguranje (BRUTO II):</p>
-          <p>5.15%</p>
-          <p>Nezaposlenost (BRUTO II):</p>
-          <p>0%</p>
+          <div class="b2-pio">
+            <p>Stopa dopinosa PIO (BRUTO II):</p>
+            <p>10%</p>
+          </div>
+          <div class="b2-zdravstveno">
+            <p>Zdravstveno osiguranje (BRUTO II):</p>
+            <p>5.15%</p>
+          </div>
+          <div class="b2-nezaposlenost">
+            <p>Nezaposlenost (BRUTO II):</p>
+            <p>0%</p>
+          </div>
         </div>
       </div>
     </main>
