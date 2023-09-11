@@ -84,7 +84,8 @@
   .vertical-line {
     display: none;
   }
-  .stope {
+  .stope,
+  .prikazi-vise {
     display: none;
   }
 

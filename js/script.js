@@ -1,6 +1,6 @@
 // Change Dark/Light mode
 
-let changeMode = document.getElementById("change-mode");
+const changeMode = document.getElementById("change-mode");
 
 changeMode.onclick = function () {
   document.body.classList.toggle("dark-theme");
@@ -272,3 +272,24 @@ konvertorBtn.addEventListener("click", () => {
     alert('Please enter a valid number in "Konvertor" field.');
   }
 });
+
+// SHOW MORE BUTTON
+
+const moreButton = document.getElementById("more-btn");
+const stopeDiv = document.querySelector(".stope");
+
+moreButton.onclick = function () {
+  function scrollToBottom() {
+    const bottomElement = document.documentElement;
+    bottomElement.scrollIntoView({ behavior: "smooth", block: "end" });
+  }
+  setTimeout(scrollToBottom, 600);
+
+  stopeDiv.classList.toggle("stope-show");
+
+  if (stopeDiv.classList.contains("stope-show")) {
+    moreButton.innerHTML = "Sakrij detalje";
+  } else {
+    moreButton.innerHTML = "Prikaži detalje";
+  }
+};
